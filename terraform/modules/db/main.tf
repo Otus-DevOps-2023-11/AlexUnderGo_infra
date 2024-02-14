@@ -27,20 +27,20 @@ resource "yandex_compute_instance" "db" {
   ssh-keys = "ubuntu:${file(var.public_key_path)}"
   }
 #Connect to VM
-connection {
-     type  = "ssh"
-     host  = self.network_interface[0].nat_ip_address
-     user  = "ubuntu"
-     agent = true
-     # путь до приватного ключа (Не используется. Подключаюсь через agent ssh)
-     #  private_key = var.private_key
-   }
+#connection {
+#     type  = "ssh"
+#     host  = self.network_interface[0].nat_ip_address
+#     user  = "ubuntu"
+#     agent = true
+#     # путь до приватного ключа (Не используется. Подключаюсь через agent ssh)
+#     #  private_key = var.private_key
+#   }
 #Change mongod conf for use external IP
-   provisioner "remote-exec" {
-     inline = [
-       "sudo sed -i 's/bindIp: 127.0.0.1/bindIp: 0.0.0.0/' /etc/mongod.conf",
-       "sudo systemctl restart mongod",
-     ]
-   }
+#   provisioner "remote-exec" {
+#     inline = [
+#       "sudo sed -i 's/bindIp: 127.0.0.1/bindIp: 0.0.0.0/' /etc/mongod.conf",
+#       "sudo systemctl restart mongod",
+#     ]
+#   }
 
 }
