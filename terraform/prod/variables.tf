@@ -37,3 +37,7 @@ variable "db_disk_image" {
   description = "Disk image for reddit db"
   default     = "reddit-db-base"
 }
+#variable "allow_tcp_ports" {
+#  description = "Enter TCP ports to allow connections to (22, 80 by default)"
+#  default     = [22, 80]
+#}
