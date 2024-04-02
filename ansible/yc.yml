@@ -1,0 +1,7 @@
+plugin: community.general.yc_compute
+folders:  # List inventory hosts from these folders.
+  - "b1g0r75ip1iq2fu4uham"
+filters:
+  - status == 'RUNNING'
+auth_kind: serviceaccountfile
+service_account_file: "/home/alex/yandex-cloud/authorized_key.json"

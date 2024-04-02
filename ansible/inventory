@@ -1,6 +1,8 @@
+#[defaults]
+#inventory = ./dinventory.py
 [app]
-appserver ansible_host=178.154.202.252
+appserver ansible_host=51.250.74.168
 #ansible_privet_key_file=~/.ssh/ubuntu
 [db]
-dbserver ansible_host=158.160.100.89
+dbserver ansible_host=158.160.63.130
 #ansible_privet_key_file=~/.ssh/ubuntu
