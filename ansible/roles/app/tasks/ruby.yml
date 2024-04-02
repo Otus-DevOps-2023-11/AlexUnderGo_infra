@@ -1,8 +1,18 @@
 ---
-- name: Install Git && Ruby && Bundler
+#Work
+#- name: Install Git && Ruby && Bundler
+#  apt:
+#    update_cache: yes
+#    name: ['git', 'ruby-full', 'ruby-bundler', 'build-essential']
+#    state: present
+#- name: Install Bundler
+#  command: bash -lc "gem install bundler -v '1.16.6'"
+#For tests
+- name: Install Ruby all
   apt:
-    update_cache: yes
-    name: ['git', 'ruby-full', 'ruby-bundler', 'build-essential']
+    name:
+    - ruby-full
+    - ruby-bundler
+    - build-essential
     state: present
-- name: Install Bundler
-  command: bash -lc "gem install bundler -v '1.16.6'"
+    update_cache: True
