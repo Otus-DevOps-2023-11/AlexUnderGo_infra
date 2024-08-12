@@ -38,14 +38,14 @@ provider "yandex" {
 
 # Создание статического ключа доступа
 #resource "yandex_iam_service_account_static_access_key" "sa-static-key" {
-#  service_account_id = "ajemb8vlrh354jgttdj7"
+#  service_account_id = ""
 #  description        = "static access key for object storage"
 #}
 
 #Создание бакета с использованием ключа
 #resource "yandex_storage_bucket" "otus-bucket77" {
-#  access_key = "YCAJEuzaiGtOQqhmCFtn9qvJ_"
-#  secret_key = "YCOk7MScJuPR8m8St2uErvVWxNsWlzmmR3RvnKL4"
+#  access_key = ""
+#  secret_key = ""
 #  bucket     = "otus-bucket77"
 #  key        = "terraform.tfstate"
 #  source     = "/home/alex/otus/AlexUnderGo_infra/terraform/"
